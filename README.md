@@ -51,7 +51,7 @@ The dataset contains **3,333 telecom customer records** with **21 features**, in
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 The churn prediction model proved to be a valuable asset for the business:
 
