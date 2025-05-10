@@ -1,11 +1,11 @@
-# 📊 Telecom Customer Churn Prediction
+## Telecom Customer Churn Prediction
 
-## 📌 Overview
+## Project Overview
 This project focuses on predicting customer churn for a telecommunications company using machine learning. By identifying customers at risk of leaving, the company can apply targeted retention strategies, reduce churn, and preserve long-term revenue. This end-to-end classification project includes data cleaning, feature engineering, modeling, evaluation, and business impact analysis.
 
 ---
 
-## 🧠 Business and Data Understanding
+## Business and Data Understanding
 
 ### Stakeholders
 The primary stakeholders are the **customer retention team** and the **marketing department**. They need insights into which customers are likely to churn, what factors drive churn, and how to prioritize intervention strategies.
@@ -23,7 +23,7 @@ The dataset contains **3,333 telecom customer records** with **21 features**, in
 
 ---
 
-## 🤖 Modeling
+## Modeling
 
 ### Preprocessing
 - **Outlier Handling**: Applied Winsorization to reduce the impact of extreme values.
@@ -36,7 +36,7 @@ The dataset contains **3,333 telecom customer records** with **21 features**, in
 
 ---
 
-## 📈 Evaluation
+## Evaluation
 
 | Model                 | Accuracy | Precision | Recall | F1 Score | ROC AUC |
 |----------------------|----------|-----------|--------|----------|---------|
