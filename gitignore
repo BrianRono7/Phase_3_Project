@@ -1,0 +1,39 @@
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore data files
+*.csv
+*.xlsx
+*.json
+*.zip
+
+# Ignore model files
+*.h5
+*.pkl
+*.joblib
+
+# Ignore output and report files
+*.pdf
+*.pptx
+*.html
+
+# Ignore logs
+*.log
+
+# Ignore VS Code settings
+.vscode/
