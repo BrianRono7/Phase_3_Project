@@ -1,32 +1,42 @@
-
 # 📊 Telecom Customer Churn Prediction
 
-This project uses machine learning to predict customer churn for a telecommunications company. By identifying at-risk customers, the company can implement proactive retention strategies to reduce churn, preserve revenue, and improve customer satisfaction.
-
-## 🔍 Problem Statement
-
-Telecom companies suffer significant losses when customers discontinue their services. Early identification of potential churners allows for targeted retention efforts. Our goal is to develop a classification model that accurately predicts churn and identifies key factors driving customer attrition.
+## 📌 Overview
+This project focuses on predicting customer churn for a telecommunications company using machine learning. By identifying customers at risk of leaving, the company can apply targeted retention strategies, reduce churn, and preserve long-term revenue. This end-to-end classification project includes data cleaning, feature engineering, modeling, evaluation, and business impact analysis.
 
 ---
 
-## 🧠 Business Understanding
+## 🧠 Business and Data Understanding
 
-- **Stakeholders**: Customer retention and marketing teams.
-- **Key Metric**: Maximizing recall (to capture churners), with additional focus on precision, F1-score, and ROC-AUC.
-- **Churn Rate**: 14.49%, indicating a class imbalance issue.
+### Stakeholders
+The primary stakeholders are the **customer retention team** and the **marketing department**. They need insights into which customers are likely to churn, what factors drive churn, and how to prioritize intervention strategies.
+
+### Dataset
+The dataset contains **3,333 telecom customer records** with **21 features**, including demographics, service plans, usage behavior, and customer service interactions. The target variable is `churn`, indicating whether a customer discontinued service.
+
+- **Churn Rate**: 14.49% — indicating a class imbalance
+- **Key Categorical Insights**:
+  - Customers with **international plans** churn more frequently (42.4%) than those without (11.5%).
+  - Customers with **voicemail plans** show higher loyalty (8.7% churn vs. 16.7%).
+- **Key Numerical Insights**:
+  - Higher day minutes and charges are associated with churn.
+  - Frequent customer service calls strongly correlate with churn.
 
 ---
 
-## 🛠️ Data Preparation
+## 🤖 Modeling
 
-- **Dataset**: 3,333 customer records with 21 features (demographics, service usage, plans, etc.)
-- **Cleaning**: Handled outliers using Winsorization.
-- **Feature Engineering**: Created usage ratios, total usage features, call categories, and boolean flags.
-- **Preprocessing**: Numerical features scaled; categorical features one-hot encoded.
+### Preprocessing
+- **Outlier Handling**: Applied Winsorization to reduce the impact of extreme values.
+- **Feature Engineering**: Created total usage metrics, usage-per-call ratios, and binary flags for service plans and churn-prone regions.
+- **Pipelines**: Used separate pipelines for scaling numerical features and encoding categorical features.
+
+### Models Built
+- **Baseline**: Logistic Regression
+- **Tuned Models**: Logistic Regression with hyperparameter tuning, Decision Tree, Random Forest, Gradient Boosting
 
 ---
 
-## 🤖 Models and Performance
+## 📈 Evaluation
 
 | Model                 | Accuracy | Precision | Recall | F1 Score | ROC AUC |
 |----------------------|----------|-----------|--------|----------|---------|
@@ -36,31 +46,22 @@ Telecom companies suffer significant losses when customers discontinue their ser
 | Random Forest        | **96.55%** | **100.0%** | 76.29% | 86.55%   | 90.79%  |
 | Gradient Boosting    | 95.95%   | 92.68%    | 78.35% | 84.92%   | 89.41%  |
 
-- **Selected Model**: Random Forest (tuned for balance between precision and recall).
-- **Optimized Threshold**: Adjusted to 0.35 to increase F1-score to 0.884.
+- **Selected Model**: Random Forest
+- **Threshold Optimization**: Adjusted decision threshold to 0.35 to improve recall and F1-score balance
 
 ---
 
-## 💼 Business Impact
+## ✅ Conclusion
+
+The churn prediction model proved to be a valuable asset for the business:
 
 - **ROI**: 585.7%
-- **Cost Savings**: $24,600 from retained customers
-- **Estimated Retained Customers**: 48
-- **Retention Cost**: $4,200
+- **Estimated Savings**: $24,600 through reduced acquisition costs and retained revenue
+- **Retained Customers**: ~48 via targeted interventions
+- **Retention Spend**: $4,200
 
----
-
-## ✅ Recommendations
-
-- Implement tiered retention strategies based on churn risk.
-- Revise contract offerings to improve long-term appeal.
-- Integrate a churn monitoring dashboard.
-- Deploy early warning systems to flag high-risk accounts.
-
----
-
-## 🚀 Next Steps
-
-- Deploy model into production with real-time inference.
-- Establish periodic retraining (e.g., quarterly).
-- Monitor model drift and feature importance over time.
+### Recommendations:
+- Deploy the churn model in production with risk-based intervention tiers
+- Introduce long-term contracts with loyalty benefits
+- Implement monitoring systems to track and retrain the model quarterly
+- Integrate alerts for high-risk customers into customer service tools
