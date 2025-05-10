@@ -9,17 +9,6 @@ Telecom companies suffer significant losses when customers discontinue their ser
 
 ---
 
-## 📁 Project Structure
-
-```
-.
-├── notebook.pdf                     # Data analysis and modeling notebook (PDF version)
-├── Non-Technical Presentation.pptx # Business-facing summary of findings and impact
-├── README.md                       # Project overview and instructions
-```
-
----
-
 ## 🧠 Business Understanding
 
 - **Stakeholders**: Customer retention and marketing teams.
