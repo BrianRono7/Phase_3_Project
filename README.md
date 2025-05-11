@@ -3,6 +3,8 @@
 ## Project Overview
 This project focuses on predicting customer churn for a telecommunications company using machine learning. By identifying customers at risk of leaving, the company can apply targeted retention strategies, reduce churn, and preserve long-term revenue. This end-to-end classification project includes data cleaning, feature engineering, modeling, evaluation, and business impact analysis.
 
+**Project Live View**: [View the project live](https://brianrono7.github.io/Phase_3_Project/)
+
 ---
 
 ## Business and Data Understanding
